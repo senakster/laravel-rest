@@ -21,6 +21,13 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+/**
+ * http/middleware/authentication unauthorized default redirect
+ */
+Route::get('/unauthorized', function () {
+    return response()->json(['error' => 'Unauthorized'], 401);
+})->name('unauthorized');
+
 Route::prefix('v1')->group(function () {
     Route::apiResource('groups', GroupController::class);
 });

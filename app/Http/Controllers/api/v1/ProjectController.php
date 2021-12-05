@@ -11,6 +11,14 @@ use Illuminate\Support\Facades\Validator;
 class ProjectController extends Controller
 {
     /**
+     * apply middleware auth:api jwt
+     */
+    public function __construct()
+    {
+        $this->middleware('auth:api', ['except' => ['index', 'show']]);
+    }
+
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response

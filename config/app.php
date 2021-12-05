@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'REST API'),
+    'name' => env('APP_NAME', 'GNF GROUPS'),
 
     /*
     |--------------------------------------------------------------------------
@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'localhost'),
+    'url' => env('APP_URL', 'https://omstilmig.nu/API/group'),
 
     'asset_url' => env('ASSET_URL', null),
 
